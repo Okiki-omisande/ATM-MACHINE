@@ -31,7 +31,7 @@ public class ATM {
             performTransaction();
             userAuthenticated = false;
             currentAccountNumber = 0;
-            screen.displayMessageLine("Thank you");
+            screen.displayMessageLine("Thank you" + "\n");
         }
     }
 
@@ -47,7 +47,7 @@ public class ATM {
             currentAccountNumber = accountNumber;
         }
         else
-            screen.displayMessageLine("Invalid account number or pin. Please try again");
+            screen.displayMessageLine("Invalid account number or pin. Please try again" + "\n");
     }
 
     private void performTransaction() {
@@ -65,20 +65,19 @@ public class ATM {
                     break;
 
                 case Exit:
-                    screen.displayMessageLine("System is exiting...");
+                    screen.displayMessageLine("System is exiting..." + "\n");
                     userExited = true;
                     break;
 
                 default:
-                    screen.displayMessageLine("Invalid input. Please enter a valid input");
+                    screen.displayMessageLine("Invalid input. Please enter a valid input" + "\n");
 
             }
         }
     }
 
     private int displayMenu() {
-        screen.displayMessageLine("Welcome");
-        screen.displayMessageLine("Enter");
+        screen.displayMessageLine("\n"+"Enter");
         screen.displayMessageLine("1- Balance Inquiry");
         screen.displayMessageLine("2- Withdrawal");
         screen.displayMessageLine("3- Deposit");

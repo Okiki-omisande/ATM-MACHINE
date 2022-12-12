@@ -71,9 +71,9 @@ public class Withdrawal extends Transaction {
                 case 1, 2, 3, 4, 5 -> userChoice = Amount[input-1];
                 case 6 -> {
                     userChoice = CANCELLED;
-                    screen.displayMessageLine("Transaction Cancelled...");
+                    screen.displayMessageLine("Transaction Cancelled..."+ "\n");
                 }
-                default -> screen.displayMessageLine("Invalid input. Please try again");
+                default -> screen.displayMessageLine("Invalid input. Please try again" + "\n");
             }
         }
         return userChoice;

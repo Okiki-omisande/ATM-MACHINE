@@ -25,13 +25,13 @@ public class Deposit extends Transaction {
                 screen.displayMessageLine("""
                         The envelope has been received
                         NOTE: the money wont be available for withdrawal until
-                              we verify the amount of any enclosed cash or checks.""");
+                              we verify the amount of any enclosed cash or checks.""" + "\n");
             }
             else
-                screen.displayMessageLine("Transaction cancelled as ATM received no deposit envelope.");
+                screen.displayMessageLine("Transaction cancelled as ATM received no deposit envelope." + "\n");
         }
         else
-            screen.displayMessageLine("Cancelling Transaction...");
+            screen.displayMessageLine("Cancelling Transaction..."+"\n");
     }
 
     public double promptForDeposit() {
